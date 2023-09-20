@@ -1,0 +1,39 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+
+    - name: Deploy to Another Repository
+      run: |
+        # Clone the target repository
+        git clone https://github.com/tomascarvalho7/tomascarvalho7.github.io.git deploy-repo
+
+        # Copy only the new or altered files to the target repository
+        rsync -av --ignore-existing build/ deploy-repo/
+
+        # Commit and push the changes in the target repository
+        cd deploy-repo
+        git add -A
+        git commit -m "Auto-generated build files"
+        git push origin main
