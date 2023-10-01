@@ -1,6 +1,6 @@
 
 .authors-section {
-  background-color: #4f4d5f;
+  background-color: var(--bg-accent);
   padding: 40px 0; /* Adjust the top and bottom padding as needed */
   text-align: center;
   width: 100%;
@@ -15,11 +15,11 @@
 }
 
 .author-card {
-  background-color: #78729C;
+  background-color: var(--primary);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  width: 50vh; /* Adjust the card width as needed */
+  width: 50vw; /* Adjust the card width as needed */
   aspect-ratio: 1 / 1;
   text-align: center;
   margin-right: 20px; /* Add margin between cards */
@@ -27,11 +27,11 @@
 }
 
 .selected-card {
-  background-color: #9B8CEF;
+  background-color: var(--accent);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  width: 50vh; /* Adjust the card width as needed */
+  width: 50vw; /* Adjust the card width as needed */
   aspect-ratio: 1 / 1;
   transform: scale(1.1);
   text-align: center; 
@@ -39,7 +39,7 @@
 }
 
 .author-card:hover {
-  background-color: #9B8CEF;
+  background-color: var(--accent);
   transform: scale(1.1);
   border-radius: 2px;
   transition: 0.25s all ease-in-out;
@@ -75,7 +75,7 @@
 .number {
   position: absolute;
   top: 40px;
-  right: 60px; /* Changed to right */
+  right: 60px;
   font-size: 18px;
   color: #fff;
 }
@@ -95,12 +95,11 @@
   flex-direction: column;
   justify-content:flex-start;
   align-items: flex-start;
-  background-color: #78729C;
+  background-color: var(--primary);
   border-radius: 10px;
-  margin: 100px;
   width: 75%;
   padding: 40px;
-  height: 80%;
+  height: 50%;
 }
 
 .nav-arrow {
