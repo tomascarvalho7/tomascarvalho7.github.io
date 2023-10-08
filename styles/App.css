@@ -60,11 +60,7 @@
   transition: transform 0.5s ease; /* Smooth transition when switching screens */
 }
 
-.bottom-screen {
-  height: 100%;
-}
-
-.top-screen {
+.bottom-screen, .top-screen {
   height: 100%;
 }
 
